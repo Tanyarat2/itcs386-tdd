@@ -1,0 +1,227 @@
+[
+  {
+    "label": "0.1-first-test",
+    "exit_code": 0,
+    "seconds": 1.141
+  },
+  {
+    "label": "0.2-wrong-expectation",
+    "exit_code": 1,
+    "seconds": 2.985
+  },
+  {
+    "label": "0.2-correct-expectation",
+    "exit_code": 0,
+    "seconds": 1.109
+  },
+  {
+    "label": "0.3-parametrized-leap-years",
+    "exit_code": 0,
+    "seconds": 1.11
+  },
+  {
+    "label": "0.4-exceptions",
+    "exit_code": 0,
+    "seconds": 1.157
+  },
+  {
+    "label": "0.5-bank-fixtures",
+    "exit_code": 0,
+    "seconds": 1.203
+  },
+  {
+    "label": "0.6-exact-float-comparison",
+    "exit_code": 1,
+    "seconds": 3.109
+  },
+  {
+    "label": "0.6-approximate-comparison",
+    "exit_code": 0,
+    "seconds": 1.172
+  },
+  {
+    "label": "0.7-quiet",
+    "exit_code": 0,
+    "seconds": 1.14
+  },
+  {
+    "label": "0.7-verbose",
+    "exit_code": 0,
+    "seconds": 1.141
+  },
+  {
+    "label": "0.7-stop-first",
+    "exit_code": 0,
+    "seconds": 1.203
+  },
+  {
+    "label": "0.7-leap-filter",
+    "exit_code": 0,
+    "seconds": 1.125
+  },
+  {
+    "label": "0.7-last-failed",
+    "exit_code": 0,
+    "seconds": 1.172
+  },
+  {
+    "label": "0.8-three-shipping-bugs",
+    "exit_code": 1,
+    "seconds": 3.171
+  },
+  {
+    "label": "0.8-shipping-fixed",
+    "exit_code": 0,
+    "seconds": 1.203
+  },
+  {
+    "label": "A1-missing-kitchen-module",
+    "exit_code": 2,
+    "seconds": 3.188
+  },
+  {
+    "label": "A1-fake-multiplication",
+    "exit_code": 0,
+    "seconds": 1.188
+  },
+  {
+    "label": "A2-second-multiplier",
+    "exit_code": 1,
+    "seconds": 3.25
+  },
+  {
+    "label": "A2-real-multiplication",
+    "exit_code": 0,
+    "seconds": 1.234
+  },
+  {
+    "label": "A3-mutating-method-returns-none",
+    "exit_code": 1,
+    "seconds": 3.172
+  },
+  {
+    "label": "A3-tests-use-return-value",
+    "exit_code": 1,
+    "seconds": 3.156
+  },
+  {
+    "label": "A3-new-quantity",
+    "exit_code": 0,
+    "seconds": 1.219
+  },
+  {
+    "label": "A4-default-object-identity",
+    "exit_code": 1,
+    "seconds": 3.156
+  },
+  {
+    "label": "A4-fake-equality-caught",
+    "exit_code": 1,
+    "seconds": 3.14
+  },
+  {
+    "label": "A4-value-equality",
+    "exit_code": 0,
+    "seconds": 1.218
+  },
+  {
+    "label": "A4-object-assertions-refactor",
+    "exit_code": 0,
+    "seconds": 1.203
+  },
+  {
+    "label": "A5-second-unit",
+    "exit_code": 1,
+    "seconds": 3.328
+  },
+  {
+    "label": "A5-unit-aware-quantity",
+    "exit_code": 0,
+    "seconds": 1.219
+  },
+  {
+    "label": "A5-factories-refactor",
+    "exit_code": 0,
+    "seconds": 1.281
+  },
+  {
+    "label": "A6-missing-addition",
+    "exit_code": 1,
+    "seconds": 3.234
+  },
+  {
+    "label": "A6-fake-addition",
+    "exit_code": 0,
+    "seconds": 1.282
+  },
+  {
+    "label": "A6-sum-plan-needs-reduction",
+    "exit_code": 1,
+    "seconds": 3.172
+  },
+  {
+    "label": "A6-reduce-sum",
+    "exit_code": 0,
+    "seconds": 1.234
+  },
+  {
+    "label": "A7-existing-same-unit-behavior",
+    "exit_code": 0,
+    "seconds": 1.234
+  },
+  {
+    "label": "A7-verify-same-unit-test-can-fail",
+    "exit_code": 1,
+    "seconds": 3.094
+  },
+  {
+    "label": "A7-restore-same-unit-expectation",
+    "exit_code": 0,
+    "seconds": 1.203
+  },
+  {
+    "label": "A7-missing-add-rate",
+    "exit_code": 1,
+    "seconds": 3.109
+  },
+  {
+    "label": "A7-raw-amounts-give-201",
+    "exit_code": 1,
+    "seconds": 3.25
+  },
+  {
+    "label": "A7-store-rates",
+    "exit_code": 1,
+    "seconds": 3.204
+  },
+  {
+    "label": "A7-pass-converter",
+    "exit_code": 1,
+    "seconds": 3.25
+  },
+  {
+    "label": "A7-convert-before-adding",
+    "exit_code": 0,
+    "seconds": 1.203
+  },
+  {
+    "label": "A7-direction-regression",
+    "exit_code": 0,
+    "seconds": 1.235
+  },
+  {
+    "label": "A8-sum-needs-times",
+    "exit_code": 1,
+    "seconds": 3.313
+  },
+  {
+    "label": "A8-scale-both-sides",
+    "exit_code": 0,
+    "seconds": 1.203
+  },
+  {
+    "label": "final-complete-suite",
+    "exit_code": 0,
+    "seconds": 1.25
+  }
+]
