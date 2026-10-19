@@ -1,0 +1,21 @@
+$ python -m pytest -q
+Expected: red
+Exit code: 2
+Elapsed seconds: 3.188
+
+
+=================================== ERRORS ====================================
+______________________ ERROR collecting test_kitchen.py _______________________
+ImportError while importing test module 'C:\Users\User\Documents\Codex\2026-10-19\can\outputs\itcs386-tdd\test_kitchen.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\User\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test_kitchen.py:10: in <module>
+    from kitchen import Quantity
+E   ModuleNotFoundError: No module named 'kitchen'
+=========================== short test summary info ===========================
+ERROR test_kitchen.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 2.10s
