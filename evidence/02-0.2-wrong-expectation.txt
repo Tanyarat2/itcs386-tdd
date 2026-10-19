@@ -1,0 +1,18 @@
+$ python -m pytest -q
+Expected: red
+Exit code: 1
+Elapsed seconds: 2.985
+
+.F                                                                       [100%]
+================================== FAILURES ===================================
+__________________________ test_1900_is_a_leap_year ___________________________
+
+    def test_1900_is_a_leap_year():
+>       assert is_leap(1900)
+E       assert False
+E        +  where False = is_leap(1900)
+
+test_leap.py:9: AssertionError
+=========================== short test summary info ===========================
+FAILED test_leap.py::test_1900_is_a_leap_year - assert False
+1 failed, 1 passed in 1.92s
