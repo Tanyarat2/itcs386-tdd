@@ -1,0 +1,14 @@
+$ python -m pytest -v
+Expected: green
+Exit code: 0
+Elapsed seconds: 1.141
+
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-9.1.1, pluggy-1.7.0 -- C:\Users\User\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\User\Documents\Codex\2026-10-19\can\outputs\itcs386-tdd
+collecting ... collected 1 item
+
+test_leap.py::test_2024_is_a_leap_year PASSED                            [100%]
+
+============================== 1 passed in 0.05s ==============================
