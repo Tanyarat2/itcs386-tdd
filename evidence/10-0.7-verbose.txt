@@ -1,0 +1,30 @@
+$ python -m pytest -v
+Expected: green
+Exit code: 0
+Elapsed seconds: 1.141
+
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-9.1.1, pluggy-1.7.0 -- C:\Users\User\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\User\Documents\Codex\2026-10-19\can\outputs\itcs386-tdd
+collecting ... collected 17 items
+
+test_bank.py::test_deposit_increases_balance PASSED                      [  5%]
+test_bank.py::test_withdraw_more_than_balance_is_refused PASSED          [ 11%]
+test_bank.py::test_each_test_gets_a_fresh_account PASSED                 [ 17%]
+test_bank.py::test_deposit_zero_is_refused PASSED                        [ 23%]
+test_bank.py::test_withdrawing_whole_balance_leaves_zero PASSED          [ 29%]
+test_bank.py::test_two_withdrawals_reduce_balance PASSED                 [ 35%]
+test_bank.py::test_interest PASSED                                       [ 41%]
+test_leap.py::test_2024_is_a_leap_year PASSED                            [ 47%]
+test_leap.py::test_1900_is_not_a_leap_year PASSED                        [ 52%]
+test_leap.py::test_is_leap[2000-True] PASSED                             [ 58%]
+test_leap.py::test_is_leap[1900-False] PASSED                            [ 64%]
+test_leap.py::test_is_leap[2024-True] PASSED                             [ 70%]
+test_leap.py::test_is_leap[2023-False] PASSED                            [ 76%]
+test_leap.py::test_is_leap[2400-True] PASSED                             [ 82%]
+test_leap.py::test_is_leap[2100-False] PASSED                            [ 88%]
+test_leap.py::test_year_zero_is_rejected PASSED                          [ 94%]
+test_leap.py::test_negative_year_is_rejected PASSED                      [100%]
+
+============================= 17 passed in 0.09s ==============================

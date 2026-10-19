@@ -1,0 +1,14 @@
+$ python -m pytest -x
+Expected: green
+Exit code: 0
+Elapsed seconds: 1.203
+
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-9.1.1, pluggy-1.7.0
+rootdir: C:\Users\User\Documents\Codex\2026-10-19\can\outputs\itcs386-tdd
+collected 17 items
+
+test_bank.py .......                                                     [ 41%]
+test_leap.py ..........                                                  [100%]
+
+============================= 17 passed in 0.10s ==============================

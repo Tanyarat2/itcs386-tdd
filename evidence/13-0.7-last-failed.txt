@@ -1,0 +1,15 @@
+$ python -m pytest --lf
+Expected: green
+Exit code: 0
+Elapsed seconds: 1.172
+
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-9.1.1, pluggy-1.7.0
+rootdir: C:\Users\User\Documents\Codex\2026-10-19\can\outputs\itcs386-tdd
+collected 17 items
+run-last-failure: 1 known failures not in selected tests
+
+test_leap.py ..........                                                  [ 58%]
+test_bank.py .......                                                     [100%]
+
+============================= 17 passed in 0.09s ==============================
