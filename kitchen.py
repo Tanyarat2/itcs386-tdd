@@ -6,7 +6,7 @@ class Quantity:
     def times(self, multiplier):
         return Quantity(self.amount * multiplier, self.unit)
 
-    def reduce(self, unit):
+    def reduce(self, converter, unit):
         return self
 
     def plus(self, other):
@@ -40,7 +40,7 @@ class Converter:
         return self.rates[(from_unit, to_unit)]
 
     def reduce(self, source, unit):
-        return source.reduce(unit)
+        return source.reduce(self, unit)
 
 
 class Sum:
@@ -48,5 +48,5 @@ class Sum:
         self.left = left
         self.right = right
 
-    def reduce(self, unit):
+    def reduce(self, converter, unit):
         return Quantity(self.left.amount + self.right.amount, unit)
