@@ -1,0 +1,18 @@
+$ python -m pytest -q
+Expected: red
+Exit code: 1
+Elapsed seconds: 3.328
+
+..........F.......................                                       [100%]
+================================== FAILURES ===================================
+__________________________ test_grams_are_not_ounces __________________________
+
+    def test_grams_are_not_ounces():
+>       assert Quantity(1, "g") != Quantity(1, "oz")
+               ^^^^^^^^^^^^^^^^
+E       TypeError: Quantity.__init__() takes 2 positional arguments but 3 were given
+
+test_kitchen.py:34: TypeError
+=========================== short test summary info ===========================
+FAILED test_kitchen.py::test_grams_are_not_ounces - TypeError: Quantity.__ini...
+1 failed, 33 passed in 2.24s

@@ -28,3 +28,7 @@ def test_equality():
 
 
 # [ ] Deferred concern: hashability (not required by this lab).
+
+
+def test_grams_are_not_ounces():
+    assert Quantity(1, "g") != Quantity(1, "oz")
