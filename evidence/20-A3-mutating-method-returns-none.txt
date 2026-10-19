@@ -1,0 +1,19 @@
+$ python -m pytest -q
+Expected: red
+Exit code: 1
+Elapsed seconds: 3.172
+
+.........F.......................                                        [100%]
+================================== FAILURES ===================================
+_________________ test_multiplication_returns_a_new_quantity __________________
+
+    def test_multiplication_returns_a_new_quantity():
+        flour = Quantity(200)
+>       assert flour.times(3).amount == 600
+               ^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: 'NoneType' object has no attribute 'amount'
+
+test_kitchen.py:27: AttributeError
+=========================== short test summary info ===========================
+FAILED test_kitchen.py::test_multiplication_returns_a_new_quantity - Attribut...
+1 failed, 32 passed in 2.11s
