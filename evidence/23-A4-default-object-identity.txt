@@ -1,0 +1,19 @@
+$ python -m pytest -q
+Expected: red
+Exit code: 1
+Elapsed seconds: 3.156
+
+.........F.......................                                        [100%]
+================================== FAILURES ===================================
+________________________________ test_equality ________________________________
+
+    def test_equality():
+>       assert Quantity(200) == Quantity(200)
+E       assert <kitchen.Quantity object at 0x0000026D9AB29FA0> == <kitchen.Quantity object at 0x0000026D9AB29CA0>
+E        +  where <kitchen.Quantity object at 0x0000026D9AB29FA0> = Quantity(200)
+E        +  and   <kitchen.Quantity object at 0x0000026D9AB29CA0> = Quantity(200)
+
+test_kitchen.py:26: AssertionError
+=========================== short test summary info ===========================
+FAILED test_kitchen.py::test_equality - assert <kitchen.Quantity object at 0x...
+1 failed, 32 passed in 2.13s
