@@ -1,67 +1,25 @@
-# Part B: Reflection (draft for student review)
+# Part B: Reflection
 
-This draft describes the recorded AI-assisted workflow. It should be
-reviewed and personalized before submission; no claim is made about
-the student's unreported feelings or difficulties. Observations can be
-checked against the Git history and evidence directory.
+## 1. Tests, code lines, and ratio
 
-## 1. Tests, production lines, and ratio
-
-The final Part A suite has 9 test functions, and `kitchen.py` has
-39 nonblank, noncomment production lines (57 physical lines
-including blank lines). The ratio of test functions to nonblank
-production lines is 9:39, or approximately 1:4.33.
-A2's temporary multiplication-by-two test was also written and later
-removed at A3, so 10 distinct Part A test functions were written
-over the exercise, while 9 remain in the final suite.
+Part A has 9 final tests and 39 lines of production code, excluding blank lines. The ratio is 9:39, about 1:4.33. There were 10 tests during development, but one was later removed.
 
 ## 2. Longest red interval
 
-A7 required the most consecutive red stages: the mixed-unit test first
-exposed the missing `add_rate`, then the incorrect raw sum of 201 g,
-and remained red while rates were stored and the converter was passed
-through reduction. Green returned when each side was converted before
-addition. This is the longest sequence of implementation-stage red
-runs; individual pytest durations in the evidence files measure test
-execution, not the student's thinking time. The student should add
-their own experience if a personal elapsed-time answer is required.
+A7 had the most failing stages. The code returned 201 g instead of 228 g because it added amounts without converting units. The tests passed after both quantities were converted to grams before adding.
 
-## 3. Fake It, Triangulate, and Obvious Implementation
+## 3. Three ways to get green
 
-A1 used Fake It by assigning 600, proving that the first test was wired
-to the implementation. A2 triangulated with multiplication by two,
-whose expected 400 forced the hard-coded constant to become a formula.
-A8 used Obvious Implementation: `Sum.times` multiplies both operands
-and returns a new sum. These choices matched the prescribed learning
-goals: small steps established confidence early, and the existing
-expression structure made A8 a short, direct implementation.
+A1 used Fake It with the fixed value 600. A2 used Triangulate by adding another multiplication example. A8 used Obvious Implementation to multiply both sides of a sum. These choices kept each change small.
 
 ## 4. Remaining test-list items
 
-All seven original behaviors, including optional A8, are checked off.
-Hashability remains explicitly deferred because A4 asked that the
-concern be recorded without implementing it. There is no required
-feature left to implement next; hashability should wait for an actual
-caller needing dictionary keys or set membership. Other hypothetical
-features were not added to the list, so there is no additional
-speculative feature to delete.
+All seven original items are complete, including A8. Hashability is still deferred because the lab does not need it. It should only be added when quantities need to be dictionary keys or set members.
 
 ## 5. Quantity.reduce and design
 
-`Quantity.reduce` now returns a quantity in the target unit using a
-converter's directional rate. A paper-first design might have put all
-conversion logic in `Converter` and treated individual quantities and
-sums separately. The tests instead led both expression types to expose
-the same reduction operation, allowing the converter to delegate.
-Whether I personally would have anticipated this method needs my own
-review before submitting this draft.
+A possible first design would put all conversion code in `Converter`. The tests showed that giving both `Quantity` and `Sum` a `reduce` method makes conversion simpler.
 
 ## 6. Tests after code versus tests before code
 
-Part 0 tested an existing implementation, checking its stated behavior
-and exposing the three shipping defects at boundaries and rounding.
-Part A used failing tests to change the API: A3 required returned values
-instead of mutation, A4 motivated equality, A6 introduced deferred sums,
-and A7 introduced conversion during reduction. That is an observable
-difference in how tests shaped the design. The student should add how
-the two approaches personally felt after reviewing and running them.
+In Part 0, tests checked existing code and found bugs. In Part A, tests guided the design. They led to returning new quantities, comparing values, creating sums, and converting units.
