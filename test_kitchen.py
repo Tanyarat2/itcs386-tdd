@@ -5,7 +5,7 @@
 # [x] 1 oz is not the same as 1 g
 # [x] 200 g + 300 g = 500 g
 # [x] 200 g + 1 oz reduced to grams using a rate
-# [ ] (200 g + 1 oz) x 2
+# [x] (200 g + 1 oz) x 2
 
 from kitchen import Converter, Quantity, grams, ounces
 
