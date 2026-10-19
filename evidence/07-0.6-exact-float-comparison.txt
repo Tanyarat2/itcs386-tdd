@@ -1,0 +1,21 @@
+$ python -m pytest -q
+Expected: red
+Exit code: 1
+Elapsed seconds: 3.109
+
+......F..........                                                        [100%]
+================================== FAILURES ===================================
+________________________________ test_interest ________________________________
+
+account = <bank.BankAccount object at 0x0000019798C1B0E0>
+
+    def test_interest(account):
+        account.add_interest(0.10)
+>       assert account.balance == 110
+E       assert 110.00000000000001 == 110
+E        +  where 110.00000000000001 = <bank.BankAccount object at 0x0000019798C1B0E0>.balance
+
+test_bank.py:45: AssertionError
+=========================== short test summary info ===========================
+FAILED test_bank.py::test_interest - assert 110.00000000000001 == 110
+1 failed, 16 passed in 2.02s

@@ -38,3 +38,8 @@ def test_two_withdrawals_reduce_balance(account):
     assert account.balance == 80
     account.withdraw(30)
     assert account.balance == 50
+
+
+def test_interest(account):
+    account.add_interest(0.10)
+    assert account.balance == 110
