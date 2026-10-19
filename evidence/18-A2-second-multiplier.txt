@@ -1,0 +1,20 @@
+$ python -m pytest -q
+Expected: red
+Exit code: 1
+Elapsed seconds: 3.250
+
+........F.......................                                         [100%]
+================================== FAILURES ===================================
+_________________________ test_multiplication_by_two __________________________
+
+    def test_multiplication_by_two():
+        flour = Quantity(200)
+        flour.times(2)
+>       assert flour.amount == 400
+E       assert 600 == 400
+E        +  where 600 = <kitchen.Quantity object at 0x0000020003611130>.amount
+
+test_kitchen.py:22: AssertionError
+=========================== short test summary info ===========================
+FAILED test_kitchen.py::test_multiplication_by_two - assert 600 == 400
+1 failed, 31 passed in 2.17s
