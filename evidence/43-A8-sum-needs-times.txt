@@ -1,0 +1,20 @@
+$ python -m pytest -q
+Expected: red
+Exit code: 1
+Elapsed seconds: 3.313
+
+...............F.......................                                  [100%]
+================================== FAILURES ===================================
+_______________________________ test_sum_times ________________________________
+
+    def test_sum_times():
+        converter = Converter()
+        converter.add_rate("oz", "g", 28)
+>       total = grams(200).plus(ounces(1)).times(2)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: 'Sum' object has no attribute 'times'
+
+test_kitchen.py:64: AttributeError
+=========================== short test summary info ===========================
+FAILED test_kitchen.py::test_sum_times - AttributeError: 'Sum' object has no ...
+1 failed, 38 passed in 2.24s
