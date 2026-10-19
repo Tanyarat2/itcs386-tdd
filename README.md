@@ -23,8 +23,7 @@ contain failing tests. The final revision is green. Files in `evidence/`
 preserve the command, exit code, and output of each run. Git history
 records the resulting red, green, and refactor stages with real commit
 timestamps. The work was performed in an automated local workflow, not
-an interactive VS Code session. No GitHub publication or course
-submission has been performed.
+an interactive VS Code session. Course submission is handled separately.
 
 `REFLECTION.md` is an evidence-based draft for the student to review;
 it does not claim to know the student's feelings or prior experience.
