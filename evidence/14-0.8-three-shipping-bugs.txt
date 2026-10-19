@@ -1,0 +1,75 @@
+$ python -m pytest -q
+Expected: red
+Exit code: 1
+Elapsed seconds: 3.171
+
+..................F..F...FF.F.                                           [100%]
+================================== FAILURES ===================================
+___________________ test_nonpositive_weight_is_rejected[0] ____________________
+
+weight = 0
+
+    @pytest.mark.parametrize("weight", [-1, 0])
+    def test_nonpositive_weight_is_rejected(weight):
+>       with pytest.raises(ValueError, match="more than 0 kg"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+test_shipping.py:8: Failed
+___________________________ test_up_to_one_kg[1-40] ___________________________
+
+weight = 1, expected = 40
+
+    @pytest.mark.parametrize("weight, expected", [(0.1, 40), (0.5, 40), (1, 40)])
+    def test_up_to_one_kg(weight, expected):
+>       assert shipping_fee(weight) == expected
+E       assert 60 == 40
+E        +  where 60 = shipping_fee(1)
+
+test_shipping.py:15: AssertionError
+____________________ test_started_extra_kilograms[5.01-70] ____________________
+
+weight = 5.01, expected = 70
+
+    @pytest.mark.parametrize("weight, expected", [
+        (5.01, 70), (5.2, 70), (6, 70), (6.01, 80), (7, 80),
+    ])
+    def test_started_extra_kilograms(weight, expected):
+>       assert shipping_fee(weight) == expected
+E       assert 60 == 70
+E        +  where 60 = shipping_fee(5.01)
+
+test_shipping.py:28: AssertionError
+____________________ test_started_extra_kilograms[5.2-70] _____________________
+
+weight = 5.2, expected = 70
+
+    @pytest.mark.parametrize("weight, expected", [
+        (5.01, 70), (5.2, 70), (6, 70), (6.01, 80), (7, 80),
+    ])
+    def test_started_extra_kilograms(weight, expected):
+>       assert shipping_fee(weight) == expected
+E       assert 60 == 70
+E        +  where 60 = shipping_fee(5.2)
+
+test_shipping.py:28: AssertionError
+____________________ test_started_extra_kilograms[6.01-80] ____________________
+
+weight = 6.01, expected = 80
+
+    @pytest.mark.parametrize("weight, expected", [
+        (5.01, 70), (5.2, 70), (6, 70), (6.01, 80), (7, 80),
+    ])
+    def test_started_extra_kilograms(weight, expected):
+>       assert shipping_fee(weight) == expected
+E       assert 70 == 80
+E        +  where 70 = shipping_fee(6.01)
+
+test_shipping.py:28: AssertionError
+=========================== short test summary info ===========================
+FAILED test_shipping.py::test_nonpositive_weight_is_rejected[0] - Failed: DID...
+FAILED test_shipping.py::test_up_to_one_kg[1-40] - assert 60 == 40
+FAILED test_shipping.py::test_started_extra_kilograms[5.01-70] - assert 60 == 70
+FAILED test_shipping.py::test_started_extra_kilograms[5.2-70] - assert 60 == 70
+FAILED test_shipping.py::test_started_extra_kilograms[6.01-80] - assert 70 == 80
+5 failed, 25 passed in 2.10s
