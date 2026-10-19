@@ -1,0 +1,19 @@
+$ python -m pytest -q
+Expected: red
+Exit code: 1
+Elapsed seconds: 3.109
+
+.............F.......................                                    [100%]
+================================== FAILURES ===================================
+_____________________________ test_mixed_addition _____________________________
+
+    def test_mixed_addition():
+        converter = Converter()
+>       converter.add_rate("oz", "g", 28)
+        ^^^^^^^^^^^^^^^^^^
+E       AttributeError: 'Converter' object has no attribute 'add_rate'
+
+test_kitchen.py:50: AttributeError
+=========================== short test summary info ===========================
+FAILED test_kitchen.py::test_mixed_addition - AttributeError: 'Converter' obj...
+1 failed, 36 passed in 2.06s
