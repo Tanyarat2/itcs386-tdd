@@ -1,0 +1,29 @@
+$ python -m pytest -q
+Expected: red
+Exit code: 1
+Elapsed seconds: 3.172
+
+...........F.......................                                      [100%]
+================================== FAILURES ===================================
+____________________________ test_simple_addition _____________________________
+
+    def test_simple_addition():
+        total = grams(200).plus(grams(300))
+        converter = Converter()
+>       assert converter.reduce(total, "g") == grams(500)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_kitchen.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Quantity(500, 'g'), other = <kitchen.Sum object at 0x000001CBF2EE9160>
+
+    def __eq__(self, other):
+>       return self.amount == other.amount and self.unit == other.unit
+                              ^^^^^^^^^^^^
+E       AttributeError: 'Sum' object has no attribute 'amount'
+
+kitchen.py:13: AttributeError
+=========================== short test summary info ===========================
+FAILED test_kitchen.py::test_simple_addition - AttributeError: 'Sum' object h...
+1 failed, 34 passed in 2.10s
