@@ -1,6 +1,6 @@
 # Test list (checked only after a corresponding test passes):
 # [x] 200 g x 3 = 600 g
-# [ ] Multiplication does not modify the original
+# [x] Multiplication does not modify the original
 # [ ] Equal amount and unit means equal quantities
 # [ ] 1 oz is not the same as 1 g
 # [ ] 200 g + 300 g = 500 g
