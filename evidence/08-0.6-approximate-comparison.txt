@@ -1,0 +1,7 @@
+$ python -m pytest -q
+Expected: green
+Exit code: 0
+Elapsed seconds: 1.172
+
+.................                                                        [100%]
+17 passed in 0.09s
