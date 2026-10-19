@@ -1,0 +1,18 @@
+$ python -m pytest -q
+Expected: red
+Exit code: 1
+Elapsed seconds: 3.234
+
+...........F.......................                                      [100%]
+================================== FAILURES ===================================
+____________________________ test_simple_addition _____________________________
+
+    def test_simple_addition():
+>       total = grams(200).plus(grams(300))
+                ^^^^^^^^^^^^^^^
+E       AttributeError: 'Quantity' object has no attribute 'plus'
+
+test_kitchen.py:38: AttributeError
+=========================== short test summary info ===========================
+FAILED test_kitchen.py::test_simple_addition - AttributeError: 'Quantity' obj...
+1 failed, 34 passed in 2.17s
